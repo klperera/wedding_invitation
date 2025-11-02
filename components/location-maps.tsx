@@ -30,13 +30,13 @@ export function LocationMaps() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-6xl md:text-7xl font-dancing text-center mb-16 text-black"
+          className="text-6xl md:text-7xl font-great-vibes text-center mb-16 text-black"
         >
           Locations
         </motion.h2>
 
         {/* Location Cards */}
-        <div className="space-y-12">
+        <div className="grid gap-12 md:grid-cols-2">
           {locations.map((location, index) => (
             <motion.div
               key={index}
@@ -52,10 +52,10 @@ export function LocationMaps() {
                   <MapPin className="w-5 h-5 text-black" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-3xl md:text-4xl font-dancing text-black mb-1">
+                  <h3 className="text-3xl md:text-4xl font-great-vibes text-black mb-1">
                     {location.name}
                   </h3>
-                  <p className="text-sm uppercase tracking-widest text-gray-500 font-serif">
+                  <p className="text-sm uppercase tracking-widest text-gray-500 font-montserrat">
                     {location.type}
                   </p>
                 </div>
@@ -64,19 +64,19 @@ export function LocationMaps() {
               {/* Location Details */}
               <div className="space-y-4 mb-6">
                 <div className="border-t border-gray-200 pt-4">
-                  <p className="text-sm uppercase tracking-wider text-gray-500 font-serif mb-2">
+                  <p className="text-sm uppercase tracking-wider text-gray-500 font-montserrat mb-2">
                     Address
                   </p>
-                  <p className="text-base md:text-lg text-black font-serif leading-relaxed">
+                  <p className="text-base md:text-lg text-black font-montserrat leading-relaxed">
                     {location.address}
                   </p>
                 </div>
 
                 <div className="border-t border-gray-200 pt-4">
-                  <p className="text-sm uppercase tracking-wider text-gray-500 font-serif mb-2">
+                  <p className="text-sm uppercase tracking-wider text-gray-500 font-montserrat mb-2">
                     Time
                   </p>
-                  <p className="text-base md:text-lg text-black font-serif">
+                  <p className="text-base md:text-lg text-black font-montserrat">
                     {location.time}
                   </p>
                 </div>
@@ -85,7 +85,7 @@ export function LocationMaps() {
               {/* Get Directions Button */}
               <button
                 onClick={() => window.open(location.mapUrl, "_blank")}
-                className="w-full md:w-auto px-8 py-3 border-2 border-black bg-black text-white font-serif uppercase tracking-wider text-sm hover:bg-white hover:text-black transition-colors duration-300 flex items-center justify-center gap-2"
+                className="w-full md:w-auto px-8 py-3 border-2 border-black bg-black text-white font-montserrat uppercase tracking-wider text-sm hover:bg-white hover:text-black transition-colors duration-300 flex items-center justify-center gap-2"
               >
                 <Navigation className="w-4 h-4" />
                 Get Directions

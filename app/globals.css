@@ -308,6 +308,14 @@
   font-family: "Playfair Display", serif;
 }
 
+.font-great-vibes {
+  font-family: var(--font-great-vibes), cursive;
+}
+
+.font-montserrat {
+  font-family: var(--font-montserrat), sans-serif;
+}
+
 /* Elegant black border instead of gold gradient */
 .elegant-border {
   border: 2px solid oklch(0.2 0 0);

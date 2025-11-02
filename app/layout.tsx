@@ -1,6 +1,11 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Playfair_Display, Manrope, Dancing_Script } from "next/font/google";
+import {
+  Playfair_Display,
+  Montserrat,
+  Dancing_Script,
+  Great_Vibes,
+} from "next/font/google";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -9,16 +14,23 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
 });
 
-const manrope = Manrope({
+const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-manrope",
+  variable: "--font-montserrat",
 });
 
 const dancingScript = Dancing_Script({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-dancing",
+});
+
+const greatVibes = Great_Vibes({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+  variable: "--font-great-vibes",
 });
 
 export const metadata: Metadata = {
@@ -35,9 +47,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${manrope.variable} ${dancingScript.variable} antialiased bg-white text-black`}
+      className={`${playfair.variable} ${montserrat.variable} ${dancingScript.variable} ${greatVibes.variable} antialiased bg-white text-black`}
     >
-      <body className="font-sans bg-white text-black">{children}</body>
+      <body className="font-montserrat bg-white text-black">{children}</body>
     </html>
   );
 }

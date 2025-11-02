@@ -7,9 +7,9 @@ const DressCode = () => {
   ];
 
   return (
-    <section className="bg-cream py-12 px-6">
+    <section className="bg-gray-50 py-12 px-6">
       <div className="max-w-md mx-auto text-center">
-        <h2 className="font-script text-4xl text-foreground mb-6">
+        <h2 className="text-4xl text-foreground font-great-vibes mb-6">
           Dress code
         </h2>
 

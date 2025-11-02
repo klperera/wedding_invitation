@@ -80,7 +80,7 @@ export function EnvelopeCard() {
           </p>
 
           {/* Wedding text in elegant script */}
-          <h3 className="text-3xl font-dancing text-gray-800 mb-3 tracking-wide">
+          <h3 className="text-3xl font-great-vibes text-gray-800 mb-3 tracking-wide">
             wedding on
           </h3>
 
@@ -93,7 +93,7 @@ export function EnvelopeCard() {
           <div className="w-16 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mb-3"></div>
 
           {/* Names */}
-          <p className="text-lg font-dancing text-gray-700 tracking-wide">
+          <p className="text-lg font-great-vibes text-gray-700 tracking-wide">
             Diana & David
           </p>
 
