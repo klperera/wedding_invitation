@@ -38,59 +38,47 @@ export function WeddingAgenda() {
   ];
 
   return (
-    <section className="py-16 bg-background">
-      <div className="container mx-auto px-4 max-w-3xl">
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-4 max-w-xl">
         {/* Handwritten "Timing" Header */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-6xl md:text-7xl font-dancing text-center mb-16 text-foreground"
+          className="text-5xl md:text-6xl font-dancing text-center mb-12 text-black"
         >
           Timing
         </motion.h2>
 
-        {/* Vertical Timeline */}
-        <div className="relative">
-          {/* Vertical Line */}
-          <div className="absolute left-24 md:left-32 top-0 bottom-0 w-px bg-foreground/20"></div>
-
-          {/* Timeline Events */}
-          <div className="space-y-12">
-            {events.map((event, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative flex gap-8 md:gap-12"
+        <div className="flex">
+          {/* Times column */}
+          <div className="flex flex-col items-end pr-6 gap-8">
+            {events.map((event, idx) => (
+              <div
+                key={idx}
+                className="text-lg md:text-xl font-serif text-gray-700 tracking-wide"
+                style={{
+                  writingMode: "vertical-lr",
+                  textOrientation: "mixed",
+                  letterSpacing: "0.1em",
+                }}
               >
-                {/* Time on the left */}
-                <div className="w-16 md:w-24 text-right flex-shrink-0">
-                  <div className="text-2xl md:text-3xl font-serif text-foreground/70">
-                    {event.time}
-                  </div>
+                {event.time}
+              </div>
+            ))}
+          </div>
+          {/* Events column */}
+          <div className="flex flex-col gap-8 border-l border-gray-300 pl-6 flex-1">
+            {events.map((event, idx) => (
+              <div key={idx}>
+                <div className="text-2xl md:text-3xl font-dancing text-black mb-1">
+                  {event.title}
                 </div>
-
-                {/* Timeline Dot */}
-                <div className="relative flex-shrink-0">
-                  <div className="w-3 h-3 rounded-full bg-foreground mt-3"></div>
+                <div className="text-base md:text-lg text-gray-700 font-serif leading-relaxed">
+                  {event.description}
                 </div>
-
-                {/* Content on the right */}
-                <div className="flex-1 pb-4">
-                  {/* Handwritten Title */}
-                  <h3 className="text-3xl md:text-4xl font-dancing text-foreground mb-2">
-                    {event.title}
-                  </h3>
-                  {/* Description */}
-                  <p className="text-sm md:text-base text-muted-foreground font-sans leading-relaxed">
-                    {event.description}
-                  </p>
-                </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

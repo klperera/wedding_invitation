@@ -35,9 +35,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${manrope.variable} ${dancingScript.variable} antialiased`}
+      className={`${playfair.variable} ${manrope.variable} ${dancingScript.variable} antialiased bg-white text-black`}
     >
-      <body className="font-sans">{children}</body>
+      <body className="font-sans bg-white text-black">{children}</body>
     </html>
   );
 }

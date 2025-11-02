@@ -22,7 +22,7 @@ export function LocationMaps() {
   ];
 
   return (
-    <section className="py-16 bg-background">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4 max-w-4xl">
         {/* Header */}
         <motion.h2
@@ -30,7 +30,7 @@ export function LocationMaps() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-6xl md:text-7xl font-dancing text-center mb-16 text-foreground"
+          className="text-6xl md:text-7xl font-dancing text-center mb-16 text-black"
         >
           Locations
         </motion.h2>
@@ -44,18 +44,18 @@ export function LocationMaps() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="border-2 border-foreground bg-card p-6 md:p-8"
+              className="border-2 border-black bg-white p-6 md:p-8 shadow-none"
             >
               {/* Location Header */}
               <div className="flex items-start gap-4 mb-6">
-                <div className="w-10 h-10 flex-shrink-0 rounded-full border-2 border-foreground flex items-center justify-center mt-1">
-                  <MapPin className="w-5 h-5 text-foreground" />
+                <div className="w-10 h-10 flex-shrink-0 rounded-full border-2 border-black flex items-center justify-center mt-1 bg-white">
+                  <MapPin className="w-5 h-5 text-black" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-3xl md:text-4xl font-dancing text-foreground mb-1">
+                  <h3 className="text-3xl md:text-4xl font-dancing text-black mb-1">
                     {location.name}
                   </h3>
-                  <p className="text-sm uppercase tracking-widest text-muted-foreground font-serif">
+                  <p className="text-sm uppercase tracking-widest text-gray-500 font-serif">
                     {location.type}
                   </p>
                 </div>
@@ -63,20 +63,20 @@ export function LocationMaps() {
 
               {/* Location Details */}
               <div className="space-y-4 mb-6">
-                <div className="border-t border-foreground/20 pt-4">
-                  <p className="text-sm uppercase tracking-wider text-muted-foreground font-serif mb-2">
+                <div className="border-t border-gray-200 pt-4">
+                  <p className="text-sm uppercase tracking-wider text-gray-500 font-serif mb-2">
                     Address
                   </p>
-                  <p className="text-base md:text-lg text-foreground font-serif leading-relaxed">
+                  <p className="text-base md:text-lg text-black font-serif leading-relaxed">
                     {location.address}
                   </p>
                 </div>
 
-                <div className="border-t border-foreground/20 pt-4">
-                  <p className="text-sm uppercase tracking-wider text-muted-foreground font-serif mb-2">
+                <div className="border-t border-gray-200 pt-4">
+                  <p className="text-sm uppercase tracking-wider text-gray-500 font-serif mb-2">
                     Time
                   </p>
-                  <p className="text-base md:text-lg text-foreground font-serif">
+                  <p className="text-base md:text-lg text-black font-serif">
                     {location.time}
                   </p>
                 </div>
@@ -85,7 +85,7 @@ export function LocationMaps() {
               {/* Get Directions Button */}
               <button
                 onClick={() => window.open(location.mapUrl, "_blank")}
-                className="w-full md:w-auto px-8 py-3 border-2 border-foreground bg-foreground text-background font-serif uppercase tracking-wider text-sm hover:bg-background hover:text-foreground transition-colors duration-300 flex items-center justify-center gap-2"
+                className="w-full md:w-auto px-8 py-3 border-2 border-black bg-black text-white font-serif uppercase tracking-wider text-sm hover:bg-white hover:text-black transition-colors duration-300 flex items-center justify-center gap-2"
               >
                 <Navigation className="w-4 h-4" />
                 Get Directions
