@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 const DressCode = () => {
   const colors = [
     { name: "Cream", color: "hsl(40, 30%, 96%)" },
@@ -7,32 +11,66 @@ const DressCode = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-12 px-6">
+    <section className="bg-gray-50 py-16 px-6">
       <div className="max-w-md mx-auto text-center">
-        <h2 className="text-4xl text-foreground font-great-vibes mb-6">
+        {/* Animated Heading */}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-5xl md:text-6xl text-black font-great-vibes mb-6"
+        >
           Dress code
-        </h2>
+        </motion.h2>
 
-        <p className="font-serif text-sm text-muted-foreground mb-2">
+        {/* Animated Subtitle */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="font-montserrat text-sm text-gray-600 mb-6"
+        >
           The wedding theme is
-        </p>
+        </motion.p>
 
-        {/* Color Swatches */}
-        <div className="flex justify-center gap-4 mb-8">
+        {/* Animated Color Swatches */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex justify-center gap-4 mb-8"
+        >
           {colors.map((color, index) => (
-            <div key={index} className="flex flex-col items-center gap-2">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+              className="flex flex-col items-center gap-2"
+            >
               <div
-                className="w-12 h-12 shadow-md"
+                className="w-12 h-12 md:w-14 md:h-14 shadow-md border border-gray-200"
                 style={{ backgroundColor: color.color }}
               ></div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        <p className="font-serif text-sm text-muted-foreground italic">
+        {/* Animated Note */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className="font-montserrat text-sm text-gray-600 italic"
+        >
           What is expected for the bride =<br />
           Thank you for understanding!
-        </p>
+        </motion.p>
       </div>
     </section>
   );

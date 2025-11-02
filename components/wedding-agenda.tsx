@@ -55,8 +55,12 @@ export function WeddingAgenda() {
           {/* Times column */}
           <div className="flex flex-col items-end pr-6 gap-8">
             {events.map((event, idx) => (
-              <div
+              <motion.div
                 key={idx}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="text-lg md:text-xl font-montserrat text-gray-700 tracking-wide"
                 style={{
                   writingMode: "vertical-lr",
@@ -65,20 +69,26 @@ export function WeddingAgenda() {
                 }}
               >
                 {event.time}
-              </div>
+              </motion.div>
             ))}
           </div>
           {/* Events column */}
           <div className="flex flex-col gap-8 border-l border-gray-300 pl-6 flex-1">
             {events.map((event, idx) => (
-              <div key={idx}>
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+              >
                 <div className="text-2xl md:text-3xl font-great-vibes text-black mb-1">
                   {event.title}
                 </div>
                 <div className="text-base md:text-lg text-gray-700 font-montserrat leading-relaxed">
                   {event.description}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
