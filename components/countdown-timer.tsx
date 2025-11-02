@@ -38,19 +38,19 @@ export function CountdownTimer() {
   return (
     <motion.section
       ref={sectionRef}
-      className="h-fit py-16"
+      className="h-fit py-8 sm:py-12 md:py-14 lg:py-16 xl:py-20"
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.4 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.6 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-4xl font-serif text-center text-foreground mb-12"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-great-vibes text-center text-black mb-8 sm:mb-10 md:mb-12"
         >
           D Day is coming!
         </motion.h2>
@@ -64,7 +64,7 @@ export function CountdownTimer() {
           className="text-center"
         >
           <motion.div
-            className="text-7xl md:text-9xl font-bold text-foreground mb-4 font-serif tracking-tight gap-3 flex justify-center"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-black mb-3 sm:mb-4 font-montserrat tracking-tight gap-2 sm:gap-3 flex justify-center"
             key={`${timeLeft.days}-${timeLeft.hours}-${timeLeft.minutes}-${timeLeft.seconds}`}
           >
             <span>{String(timeLeft.days).padStart(2, "0")}</span>:
@@ -77,7 +77,7 @@ export function CountdownTimer() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.6 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-sm md:text-base text-muted-foreground font-serif tracking-widest"
+            className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 font-montserrat tracking-widest"
           >
             Days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hours&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minutes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Seconds
           </motion.div>

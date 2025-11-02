@@ -1,46 +1,28 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { motion } from "framer-motion";
 
 export function InvitationDetails() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <section
       ref={sectionRef}
-      className="py-20 flex items-center justify-center"
+      className="py-12 sm:py-16 md:py-18 lg:py-20 flex items-center justify-center"
       // style={{
       //   background:
       //     "linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%)",
       // }}
     >
-      <div className="container mx-auto px-4">
-        <div className="max-w-lg mx-auto">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8">
+        <div className="max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="bg-gradient-to-b from-[#faf7f0] via-[#f5f1e8] to-[#ede8dc] p-12 flex flex-col items-center justify-start relative overflow-hidden"
+            className="bg-gradient-to-b from-[#faf7f0] via-[#f5f1e8] to-[#ede8dc] p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col items-center justify-start relative overflow-hidden"
             style={{
               borderRadius: "90px 90px 12px 12px",
               boxShadow: `
@@ -63,9 +45,9 @@ export function InvitationDetails() {
             ></div>
 
             {/* Header - The Wedding Of */}
-            <div className="mb-3 text-center relative z-10">
+            <div className="mb-2 sm:mb-3 text-center relative z-10">
               <p
-                className="text-[11px] tracking-[0.4em] uppercase font-serif"
+                className="text-[9px] sm:text-[10px] md:text-[11px] tracking-[0.3em] sm:tracking-[0.35em] md:tracking-[0.4em] uppercase font-montserrat"
                 style={{
                   color: "#4a4a4a",
                   textShadow: "0 1px 2px rgba(255,255,255,0.8)",
@@ -77,11 +59,10 @@ export function InvitationDetails() {
             </div>
 
             {/* Monogram D&H */}
-            <div className="mb-3 relative z-10">
+            <div className="mb-2 sm:mb-3 relative z-10">
               <div
-                className="text-5xl font-serif tracking-wide"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-great-vibes tracking-wide"
                 style={{
-                  fontFamily: "'Playfair Display', serif",
                   color: "#b8935a",
                   fontWeight: 600,
                   textShadow: "0 2px 4px rgba(0,0,0,0.1)",
@@ -92,9 +73,9 @@ export function InvitationDetails() {
             </div>
 
             {/* Bible Quote */}
-            <div className="mb-4 text-center max-w-md relative z-10">
+            <div className="mb-3 sm:mb-4 text-center max-w-full sm:max-w-sm md:max-w-md relative z-10">
               <p
-                className="text-[12px] font-dancing italic leading-relaxed"
+                className="text-[10px] sm:text-[11px] md:text-[12px] font-great-vibes italic leading-relaxed"
                 style={{
                   color: "#3a3a3a",
                   textShadow: "0 1px 1px rgba(255,255,255,0.5)",
@@ -103,7 +84,7 @@ export function InvitationDetails() {
                 &quot;Therefore what God has joined together,
               </p>
               <p
-                className="text-[12px] font-dancing italic leading-relaxed"
+                className="text-[10px] sm:text-[11px] md:text-[12px] font-great-vibes italic leading-relaxed"
                 style={{
                   color: "#3a3a3a",
                   textShadow: "0 1px 1px rgba(255,255,255,0.5)",
@@ -112,7 +93,7 @@ export function InvitationDetails() {
                 let man not separate&quot;
               </p>
               <p
-                className="text-[11px] font-serif mt-1"
+                className="text-[9px] sm:text-[10px] md:text-[11px] font-montserrat mt-1"
                 style={{
                   color: "#5a5a5a",
                   textShadow: "0 1px 1px rgba(255,255,255,0.5)",
@@ -124,11 +105,10 @@ export function InvitationDetails() {
             </div>
 
             {/* Couple Names - Large */}
-            <div className="mb-4 relative z-10">
+            <div className="mb-3 sm:mb-4 relative z-10">
               <h1
-                className="text-5xl font-serif tracking-wide text-center"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-great-vibes tracking-wide text-center"
                 style={{
-                  fontFamily: "'Playfair Display', serif",
                   color: "#a67c52",
                   fontWeight: 600,
                   textShadow: "0 3px 6px rgba(0,0,0,0.15)",
@@ -140,7 +120,7 @@ export function InvitationDetails() {
 
             {/* Parents Names */}
             <div
-              className="mb-3 text-center text-[11px] font-serif leading-relaxed space-y-1 relative z-10"
+              className="mb-2 sm:mb-3 text-center text-[9px] sm:text-[10px] md:text-[11px] font-montserrat leading-relaxed space-y-1 relative z-10"
               style={{
                 color: "#3a3a3a",
                 textShadow: "0 1px 1px rgba(255,255,255,0.5)",
@@ -167,7 +147,7 @@ export function InvitationDetails() {
             ></div>
 
             <p
-              className="text-[11px] font-serif uppercase tracking-wide mb-3 relative z-10 text-center"
+              className="text-[9px] sm:text-[10px] md:text-[11px] font-montserrat uppercase tracking-wide mb-2 sm:mb-3 relative z-10 text-center"
               style={{
                 color: "#3a3a3a",
                 textShadow: "0 1px 1px rgba(255,255,255,0.5)",
@@ -178,16 +158,11 @@ export function InvitationDetails() {
             </p>
 
             {/* Date and Details Section */}
-            <div className="flex gap-4 items-start justify-center w-full mt-3 relative z-10">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start justify-center w-full mt-2 sm:mt-3 relative z-10">
               {/* Left - Date */}
-              <div
-                className="flex flex-col items-center pr-4"
-                style={{
-                  borderRight: "1px solid rgba(58,58,58,0.5)",
-                }}
-              >
+              <div className="flex flex-col items-center pr-0 sm:pr-4 pb-3 sm:pb-0 w-full sm:w-auto border-b sm:border-b-0 sm:border-r border-[rgba(58,58,58,0.5)]">
                 <p
-                  className="text-2xl font-dancing mb-1"
+                  className="text-xl sm:text-2xl md:text-3xl font-great-vibes mb-1"
                   style={{
                     color: "#3a3a3a",
                     textShadow: "0 1px 2px rgba(255,255,255,0.6)",
@@ -196,7 +171,7 @@ export function InvitationDetails() {
                   December
                 </p>
                 <p
-                  className="text-7xl font-serif font-bold leading-none"
+                  className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-montserrat font-bold leading-none"
                   style={{
                     color: "#2a2a2a",
                     textShadow: "0 2px 4px rgba(0,0,0,0.15)",
@@ -206,7 +181,7 @@ export function InvitationDetails() {
                   13
                 </p>
                 <p
-                  className="text-3xl font-serif"
+                  className="text-2xl sm:text-3xl md:text-4xl font-montserrat"
                   style={{
                     color: "#2a2a2a",
                     textShadow: "0 1px 2px rgba(255,255,255,0.5)",
@@ -219,7 +194,7 @@ export function InvitationDetails() {
 
               {/* Right - Event Details */}
               <div
-                className="text-left text-[11px] font-serif space-y-1 flex-1"
+                className="text-left text-[9px] sm:text-[10px] md:text-[11px] font-montserrat space-y-1 flex-1 w-full"
                 style={{
                   color: "#3a3a3a",
                   textShadow: "0 1px 1px rgba(255,255,255,0.5)",
@@ -232,7 +207,7 @@ export function InvitationDetails() {
                 <p className="uppercase">AT ST. MARY&apos;S CHURCH, THUDELLA</p>
                 <p className="uppercase">AT 3.30 PM</p>
                 <p
-                  className="text-lg font-dancing mt-2"
+                  className="text-base sm:text-lg md:text-xl font-great-vibes mt-2"
                   style={{
                     color: "#4a4a4a",
                     textShadow: "0 1px 2px rgba(255,255,255,0.6)",
@@ -244,10 +219,10 @@ export function InvitationDetails() {
                 <p className="uppercase">(ADRIANA BALLROOM)</p>
                 <p className="uppercase">SEEDUWA</p>
                 <p className="uppercase font-bold">FROM 7.00 PM ONWARDS</p>
-                <p className="uppercase mt-2 text-[10px]">
+                <p className="uppercase mt-2 text-[8px] sm:text-[9px] md:text-[10px]">
                   RSVP (REGRETS ONLY)
                 </p>
-                <p className="text-[10px]">
+                <p className="text-[8px] sm:text-[9px] md:text-[10px]">
                   HESHANI : 076-4919991 | DILUM : 077-5314997
                 </p>
               </div>
