@@ -2,6 +2,7 @@
 
 import { Phone, MessageCircle, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export function RSVPSection() {
   const handleWhatsApp = (number: string) => {
@@ -33,7 +34,7 @@ export function RSVPSection() {
     <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
         {/* Header */}
-        <motion.h2
+        {/* <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -51,7 +52,15 @@ export function RSVPSection() {
           className="text-center text-gray-500 mb-8 sm:mb-10 md:mb-12 lg:mb-14 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-widest"
         >
           Please let us know before December 10th if you will be attending
-        </motion.p>
+        </motion.p> */}
+
+        <Image
+          src="/Rsvp.jpeg"
+          alt="RSVP Decorative"
+          className="mx-auto mb-8 sm:mb-10 md:mb-12 lg:mb-14 w-full h-full object-cover object-center"
+          width={600}
+          height={150}
+        />
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
