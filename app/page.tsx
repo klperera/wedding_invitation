@@ -8,7 +8,7 @@ import DressCode from "@/components/dress-code";
 
 export default function WeddingInvitation() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-sidebar-accent-foreground">
       {/* <WeddingHeader /> */}
       <HeroSection />
       {/* <EnvelopeCard /> */}

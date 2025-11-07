@@ -64,7 +64,7 @@ export function CountdownTimer() {
           className="text-center"
         >
           <motion.div
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-black mb-3 sm:mb-4 font-montserrat tracking-tight gap-2 sm:gap-3 flex justify-center"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-semibold text-black mb-3 sm:mb-4 font-montserrat tracking-tight gap-2 sm:gap-3 flex justify-center"
             key={`${timeLeft.days}-${timeLeft.hours}-${timeLeft.minutes}-${timeLeft.seconds}`}
           >
             <span>{String(timeLeft.days).padStart(2, "0")}</span>:
