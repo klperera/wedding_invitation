@@ -34,22 +34,29 @@ const greatVibes = Great_Vibes({
 });
 
 export const metadata: Metadata = {
-  title: "You're Invited! Our Wedding",
+  title: "Dilum & Heshani - Wedding Invitation",
   description:
     "Join us to celebrate our special day! Click for all the details.",
 
+  // Resolve relative OG image paths to an absolute URL for social platforms.
+  // Set NEXT_PUBLIC_SITE_URL in production (e.g. https://your-domain.com).
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ||
+      "https://wedding-invitation-68o0.onrender.com"
+  ),
+
   // ✨ Open Graph (OG) tags are nested under 'openGraph'
   openGraph: {
-    title: "You're Invited! Our Wedding",
+    title: "Dilum & Heshani - Wedding Invitation",
     description:
       "Join us to celebrate our special day! Click for all the details.",
     url: "https://wedding-invitation-68o0.onrender.com",
     siteName: "Our Wedding Invitation",
     images: [
       {
-        url: "https://www.your-image-host.com/wedding-photo.jpg", // Must be an absolute URL
-        width: 1200, // Optional
-        height: 630, // Optional
+        url: "/Hero%20image.jpeg",
+        width: 1200,
+        height: 630,
       },
     ],
     locale: "en_US", // Optional
@@ -59,9 +66,9 @@ export const metadata: Metadata = {
   // Optional: Twitter-specific tags are nested under 'twitter'
   twitter: {
     card: "summary_large_image",
-    title: "You're Invited! Our Wedding",
+    title: "Dilum & Heshani - Wedding Invitation",
     description: "Join us to celebrate our special day!",
-    images: ["https://www.your-image-host.com/wedding-photo.jpg"], // Must be an absolute URL
+    images: ["/Hero%20image.jpeg"],
   },
 };
 
