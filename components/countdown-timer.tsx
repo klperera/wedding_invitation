@@ -38,9 +38,9 @@ export function CountdownTimer() {
   return (
     <motion.section
       ref={sectionRef}
-      className="h-fit py-8 sm:py-12 md:py-14 lg:py-16 xl:py-20"
-      initial={{ opacity: 0, y: 60 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      className="h-fit py-8 sm:py-12 md:py-14 lg:py-16 xl:py-20 bg-gradient-to-br from-gray-100 to-white"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.4 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >

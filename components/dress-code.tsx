@@ -11,7 +11,7 @@ const DressCode = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-16 px-6">
+    <section className="py-16 px-6">
       <div className="max-w-md mx-auto text-center">
         {/* Animated Heading */}
         <motion.h2
@@ -68,7 +68,7 @@ const DressCode = () => {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="font-montserrat text-sm text-gray-600 italic"
         >
-          What is expected for the bride =<br />
+          What is expected for the bride <br />
           Thank you for understanding!
         </motion.p>
       </div>

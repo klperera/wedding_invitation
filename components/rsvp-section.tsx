@@ -30,7 +30,7 @@ export function RSVPSection() {
   };
 
   return (
-    <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gray-50">
+    <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
         {/* Header */}
         <motion.h2
