@@ -33,12 +33,12 @@ export function HeroSection() {
             initial={{ opacity: 0, y: -40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-great-vibes mb-2 sm:mb-3 md:mb-4 text-white"
+            className="text-5xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-great-vibes mb-2 sm:mb-3 md:mb-4 text-white"
             style={{
               textShadow:
                 "2px 2px 4px rgba(0,0,0,0.5), 4px 4px 8px rgba(0,0,0,0.3)",
               fontWeight: 400,
-              letterSpacing: "0.02em",
+              letterSpacing: "0.05em",
             }}
           >
             Dilum and Heshani
@@ -48,7 +48,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
-            className="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-montserrat tracking-[0.15em] sm:tracking-[0.2em] md:tracking-[0.3em] text-white"
+            className="text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-montserrat tracking-[0.15em] sm:tracking-[0.2em] md:tracking-[0.3em] text-white"
             style={{
               textShadow:
                 "1px 1px 3px rgba(0,0,0,0.6), 2px 2px 6px rgba(0,0,0,0.4)",
@@ -58,6 +58,21 @@ export function HeroSection() {
             Save the Date
           </motion.p>
         </div>
+        {/* Date badge (bottom-right) */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+          className="absolute bottom-6 right-4 sm:bottom-8 sm:right-8 md:bottom-10 md:right-12 z-20 text-white px-3 py-2 sm:px-4 sm:py-3 flex flex-col items-center"
+          aria-label="Wedding date"
+          style={{
+            textShadow: "0 2px 6px rgba(0,0,0,0.7), 0 1px 0 rgba(0,0,0,0.45)",
+          }}
+        >
+          <span className="font-montserrat text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold uppercase mt-1">
+            13 December 2025
+          </span>
+        </motion.div>
       </section>
 
       {/* <section className="w-full bg-gradient-to-b from-black/40 to-background py-16 md:py-24">
