@@ -33,7 +33,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: -40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
-            className="text-5xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-great-vibes mb-2 sm:mb-3 md:mb-4 text-white"
+            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[6rem] font-great-vibes mb-2 sm:mb-3 md:mb-4 text-white"
             style={{
               textShadow:
                 "2px 2px 4px rgba(0,0,0,0.5), 4px 4px 8px rgba(0,0,0,0.3)",
@@ -48,11 +48,11 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
-            className="text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-montserrat tracking-[0.15em] sm:tracking-[0.2em] md:tracking-[0.3em] text-white"
+            className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-montserrat text-white"
             style={{
               textShadow:
                 "1px 1px 3px rgba(0,0,0,0.6), 2px 2px 6px rgba(0,0,0,0.4)",
-              fontWeight: 300,
+              fontWeight: 400,
             }}
           >
             Save the Date

@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Upload } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import CircularGallery from "./CircularGallery";
 
 export function ImageGallery() {
   const [images, setImages] = useState([
@@ -37,8 +38,23 @@ export function ImageGallery() {
         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-great-vibes text-center text-black mb-8 sm:mb-10 md:mb-12">
           Our Journey Together
         </h2>
+        <div className="h-screen relative">
+          <CircularGallery
+            items={[
+              { image: "/countdown.jpeg", text: "" },
+              {
+                image: "/Hero image.jpeg",
+                text: "",
+              },
+            ]}
+            bend={1}
+            textColor="#000000"
+            borderRadius={0.05}
+            scrollEase={0.01}
+          />
+        </div>
 
-        <div className="max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto">
+        {/* <div className="max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto">
           <Card className="mb-6 sm:mb-7 md:mb-8 border-2 border-black">
             <CardHeader>
               <CardTitle className="text-center text-black font-great-vibes text-2xl sm:text-3xl md:text-4xl">
@@ -72,22 +88,7 @@ export function ImageGallery() {
               </div>
             </CardContent>
           </Card>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6">
-            {images.map((image, index) => (
-              <div key={index} className="relative group">
-                <div className="aspect-square relative overflow-hidden rounded-lg border-2 border-black/20">
-                  <Image
-                    src={image || "/placeholder.svg"}
-                    alt={`Gallery image ${index + 1}`}
-                    fill
-                    className="object-cover transition-transform group-hover:scale-105"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

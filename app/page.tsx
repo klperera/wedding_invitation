@@ -5,6 +5,8 @@ import { CountdownTimer } from "@/components/countdown-timer";
 import { RSVPSection } from "@/components/rsvp-section";
 import { WeddingFooter } from "@/components/wedding-footer";
 import DressCode from "@/components/dress-code";
+import { ImageGallery } from "@/components/image-gallery";
+import { InvitationDetails } from "@/components/invitation-details";
 
 export default function WeddingInvitation() {
   return (
@@ -13,12 +15,12 @@ export default function WeddingInvitation() {
       <HeroSection />
       {/* <EnvelopeCard /> */}
       {/* <InvitationEnvelope /> */}
-      {/* <InvitationDetails /> */}
       <CountdownTimer />
+      {/* <InvitationDetails /> */}
       <DressCode />
       <WeddingAgenda />
+      <ImageGallery />
       <LocationMaps />
-      {/* <ImageGallery /> */}
       <RSVPSection />
       <WeddingFooter />
     </main>
