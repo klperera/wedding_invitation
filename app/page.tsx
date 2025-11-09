@@ -6,17 +6,17 @@ import { RSVPSection } from "@/components/rsvp-section";
 import { WeddingFooter } from "@/components/wedding-footer";
 import DressCode from "@/components/dress-code";
 import { ImageGallery } from "@/components/image-gallery";
-import { InvitationDetails } from "@/components/invitation-details";
+import { EnvelopeCard } from "@/components/envelope-card";
 
 export default function WeddingInvitation() {
   return (
     <main className="min-h-screen bg-sidebar-accent-foreground">
       {/* <WeddingHeader /> */}
       <HeroSection />
-      {/* <EnvelopeCard /> */}
+      <EnvelopeCard />
       {/* <InvitationEnvelope /> */}
-      <CountdownTimer />
       {/* <InvitationDetails /> */}
+      <CountdownTimer />
       <DressCode />
       <WeddingAgenda />
       <ImageGallery />
