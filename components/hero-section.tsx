@@ -84,10 +84,22 @@ export function HeroSection() {
           </div>
           {/* Subtitle */}
           <motion.p
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
-            className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-montserrat text-white"
+            initial={{
+              opacity: 0,
+              x: -90,
+              filter: "blur(10px)",
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              filter: "blur(0px)",
+            }}
+            transition={{
+              duration: 2,
+              ease: "easeInOut",
+              filter: { duration: 2 },
+            }}
+            className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-montserrat text-white uppercase tracking-widest"
             style={{
               textShadow:
                 "1px 1px 3px rgba(0,0,0,0.6), 2px 2px 6px rgba(0,0,0,0.4)",
