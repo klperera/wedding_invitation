@@ -31,10 +31,22 @@ export function HeroSection() {
         <div className="relative z-10 text-center text-white mt-8 sm:mt-12 md:mt-16 lg:mt-18 px-3 sm:px-4 md:px-6">
           {/* Couple names in elegant script */}
           <motion.h1
-            initial={{ opacity: 0, x: -90 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
-            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[6rem] font-symphony mb-2 sm:mb-3 md:mb-4 text-white"
+            initial={{
+              opacity: 0,
+              x: -90,
+              filter: "blur(10px)",
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              filter: "blur(0px)",
+            }}
+            transition={{
+              duration: 1.2,
+              ease: "easeInOut",
+              filter: { duration: 1.5 },
+            }}
+            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[6rem] font-great-vibes mb-2 sm:mb-3 md:mb-4 text-white"
             style={{
               textShadow:
                 "2px 2px 4px rgba(0,0,0,0.5), 4px 4px 8px rgba(0,0,0,0.3)",
