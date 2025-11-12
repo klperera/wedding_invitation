@@ -4,11 +4,11 @@ export function EnvelopeCard() {
   return (
     <>
       <Image
-        src="/invitation.jpg"
+        src="/invitation.png"
         alt="Envelope"
-        width={500}
+        width={1200}
         height={300}
-        className="mx-auto "
+        className="mx-auto w-full h-auto object-contain"
       />
     </>
   );
