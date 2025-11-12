@@ -99,11 +99,11 @@ export function HeroSection() {
               ease: "easeInOut",
               filter: { duration: 2 },
             }}
-            className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-montserrat text-white uppercase tracking-widest"
+            className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-montserrat text-white uppercase tracking-widest font-extrabold mb-2"
             style={{
               textShadow:
                 "1px 1px 3px rgba(0,0,0,0.6), 2px 2px 6px rgba(0,0,0,0.4)",
-              fontWeight: 400,
+              fontWeight: 700,
             }}
           >
             Save the Date
