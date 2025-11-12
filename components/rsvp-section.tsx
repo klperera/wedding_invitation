@@ -7,7 +7,7 @@ import Image from "next/image";
 export function RSVPSection() {
   const handleWhatsApp = (number: string) => {
     window.open(
-      `https://wa.me/${number}?text=Hello! I would like to RSVP for Dilum & Heshani's wedding.`,
+      `https://wa.me/${number}?text=Hello! I would like to RSVP for Dilum and Heshani's wedding.`,
       "_blank"
     );
   };
@@ -31,7 +31,7 @@ export function RSVPSection() {
   };
 
   return (
-    <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
+    <section className="py-8 sm:py-12 md:py-16 lg:py-20">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
         {/* Header */}
         {/* <motion.h2
@@ -67,7 +67,7 @@ export function RSVPSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="border-2 border-black bg-white p-6 sm:p-8 md:p-10 lg:p-12 xl:p-14"
+          className="p-6 sm:p-8 md:p-10 lg:p-12 xl:p-14"
         >
           {/* Main message */}
           <p className="text-center text-gray-700 mb-8 sm:mb-10 md:mb-12 font-montserrat text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
@@ -85,7 +85,7 @@ export function RSVPSection() {
               <div className="space-y-3">
                 <button
                   onClick={() => handleWhatsApp("94764919991")}
-                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-white text-black hover:bg-black hover:text-white transition-colors duration-300 flex items-center justify-center gap-2 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-wider"
+                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-white text-black hover:bg-[#00671d] rounded-lg hover:text-white transition-colors duration-300 flex items-center justify-center gap-2 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-wider"
                 >
                   <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4" />
                   <span className="hidden sm:inline">
@@ -95,7 +95,7 @@ export function RSVPSection() {
                 </button>
                 <button
                   onClick={() => window.open("tel:+94764919991")}
-                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-white text-black hover:bg-black hover:text-white transition-colors duration-300 flex items-center justify-center gap-2 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-wider"
+                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-white text-black hover:bg-black hover:text-white rounded-lg transition-colors duration-300 flex items-center justify-center gap-2 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-wider"
                 >
                   <Phone className="w-3 h-3 sm:w-4 sm:h-4" />
                   <span className="hidden sm:inline">Call: 076-4919991</span>
@@ -112,7 +112,7 @@ export function RSVPSection() {
               <div className="space-y-3">
                 <button
                   onClick={() => handleWhatsApp("94775314997")}
-                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-white text-black hover:bg-black hover:text-white transition-colors duration-300 flex items-center justify-center gap-2 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-wider"
+                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-white text-black hover:bg-[#00671d] hover:text-white transition-colors rounded-lg duration-300 flex items-center justify-center gap-2 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-wider"
                 >
                   <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4" />
                   <span className="hidden sm:inline">
@@ -122,7 +122,7 @@ export function RSVPSection() {
                 </button>
                 <button
                   onClick={() => window.open("tel:+94775314997")}
-                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-white text-black hover:bg-black hover:text-white transition-colors duration-300 flex items-center justify-center gap-2 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-wider"
+                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-white text-black hover:bg-black hover:text-white transition-colors rounded-lg duration-300 flex items-center justify-center gap-2 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-wider"
                 >
                   <Phone className="w-3 h-3 sm:w-4 sm:h-4" />
                   <span className="hidden sm:inline">Call: 077-5314997</span>

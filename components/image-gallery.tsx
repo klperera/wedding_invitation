@@ -3,10 +3,6 @@
 import type React from "react";
 
 import { useState } from "react";
-import Image from "next/image";
-import { Upload } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import CircularGallery from "./CircularGallery";
 
 export function ImageGallery() {
@@ -33,7 +29,7 @@ export function ImageGallery() {
   };
 
   return (
-    <section className="py-8 sm:py-12 md:py-14 lg:py-16 bg-white">
+    <section className="py-8 sm:py-12 md:py-14 lg:py-16">
       <div className="container mx-auto px-4 sm:px-6 md:px-8">
         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-great-vibes text-center text-black mb-8 sm:mb-10 md:mb-12">
           Our Journey Together
