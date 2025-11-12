@@ -28,7 +28,7 @@ export function HeroSection() {
         </motion.div>
 
         {/* Text overlay content */}
-        <div className="relative z-10 text-center text-white mt-4 sm:mt-6 md:mt-10 lg:mt-16 px-3 sm:px-4 md:px-6">
+        <div className="relative z-10 text-center text-white mt-4 sm:mt-6 px-3 sm:px-4 md:px-6">
           {/* Couple names in elegant script */}
           <div
             className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[6rem] font-great-vibes mb-2 sm:mb-3 md:mb-4 text-white"
@@ -53,13 +53,14 @@ export function HeroSection() {
                 ease: "easeInOut",
                 filter: { duration: 1.5 },
               }}
-              className="flex justify-center items-center"
+              className="flex justify-center items-center mb-4 sm:mb-6 md:mb-8"
             >
               <Image
                 src="/DH.png"
                 alt="Dilum and Heshani"
-                width={120}
+                width={100}
                 height={50}
+                className="mx-2 sm:mx-4 w-15 md:w-20"
               />
             </motion.div>
             <motion.p
@@ -99,7 +100,7 @@ export function HeroSection() {
               ease: "easeInOut",
               filter: { duration: 2 },
             }}
-            className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-montserrat text-white uppercase tracking-widest font-extrabold mb-2"
+            className="text-base sm:text-xl md:text-3xl lg:text-3xl xl:text-4xl font-montserrat text-white uppercase tracking-widest font-extrabold mb-2"
             style={{
               textShadow:
                 "1px 1px 3px rgba(0,0,0,0.6), 2px 2px 6px rgba(0,0,0,0.4)",
