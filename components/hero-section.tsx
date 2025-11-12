@@ -30,22 +30,7 @@ export function HeroSection() {
         {/* Text overlay content */}
         <div className="relative z-10 text-center text-white mt-4 sm:mt-6 md:mt-10 lg:mt-16 px-3 sm:px-4 md:px-6">
           {/* Couple names in elegant script */}
-          <motion.h1
-            initial={{
-              opacity: 0,
-              x: -90,
-              filter: "blur(10px)",
-            }}
-            animate={{
-              opacity: 1,
-              x: 0,
-              filter: "blur(0px)",
-            }}
-            transition={{
-              duration: 2,
-              ease: "easeInOut",
-              filter: { duration: 2 },
-            }}
+          <div
             className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[6rem] font-great-vibes mb-2 sm:mb-3 md:mb-4 text-white"
             style={{
               textShadow:
@@ -54,16 +39,49 @@ export function HeroSection() {
               letterSpacing: "0.01rem",
             }}
           >
-            <div className="flex justify-center items-center">
+            <motion.div
+              initial={{
+                opacity: 0,
+                filter: "blur(10px)",
+              }}
+              animate={{
+                opacity: 1,
+                filter: "blur(0px)",
+              }}
+              transition={{
+                duration: 1.5,
+                ease: "easeInOut",
+                filter: { duration: 1.5 },
+              }}
+              className="flex justify-center items-center"
+            >
               <Image
                 src="/DH.png"
                 alt="Dilum and Heshani"
-                width={150}
+                width={120}
                 height={50}
               />
-            </div>
-            <span>Dilum & Heshani</span>
-          </motion.h1>
+            </motion.div>
+            <motion.p
+              initial={{
+                opacity: 0,
+                x: -90,
+                filter: "blur(10px)",
+              }}
+              animate={{
+                opacity: 1,
+                x: 0,
+                filter: "blur(0px)",
+              }}
+              transition={{
+                duration: 2,
+                ease: "easeInOut",
+                filter: { duration: 2 },
+              }}
+            >
+              Dilum & Heshani
+            </motion.p>
+          </div>
           {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 40 }}
