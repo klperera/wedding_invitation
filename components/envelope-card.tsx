@@ -4,7 +4,7 @@ export function EnvelopeCard() {
   return (
     <>
       <Image
-        src="/invitation.jpeg"
+        src="/invitation.jpg"
         alt="Envelope"
         width={500}
         height={300}
