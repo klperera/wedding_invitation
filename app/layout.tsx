@@ -1,5 +1,6 @@
 import type React from "react";
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import {
   Playfair_Display,
   Montserrat,
@@ -31,6 +32,23 @@ const greatVibes = Great_Vibes({
   weight: "400",
   display: "swap",
   variable: "--font-great-vibes",
+});
+
+// Symphony Letter (local) - place the font files under /public/fonts/
+// Example filenames (you must add these files to the repo):
+// public/fonts/SymphonyLetter-Regular.woff2
+// public/fonts/SymphonyLetter-Bold.woff2
+// Then Next will load them via next/font/local.
+const symphony = localFont({
+  src: [
+    {
+      path: "../public/fonts/symphony-pro-regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-symphony",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -80,7 +98,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${montserrat.variable} ${dancingScript.variable} ${greatVibes.variable} antialiased bg-black text-white`}
+      className={`${playfair.variable} ${montserrat.variable} ${dancingScript.variable} ${greatVibes.variable} ${symphony.variable} antialiased bg-black text-white`}
     >
       <body className="font-montserrat">{children}</body>
     </html>

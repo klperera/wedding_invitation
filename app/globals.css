@@ -316,6 +316,10 @@
   font-family: var(--font-montserrat), sans-serif;
 }
 
+.font-symphony {
+  font-family: var(--font-symphony), serif;
+}
+
 /* Elegant black border instead of gold gradient */
 .elegant-border {
   border: 2px solid oklch(0.2 0 0);

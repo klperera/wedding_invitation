@@ -15,10 +15,11 @@ export function HeroSection() {
           className="absolute inset-0 w-full h-full"
         >
           <Image
-            src="/countdown.jpeg"
+            src="/Hero image.jpeg"
             alt="Hero Background"
             fill
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: "55% 50%" }}
             priority
             quality={100}
             unoptimized
@@ -30,18 +31,24 @@ export function HeroSection() {
         <div className="relative z-10 text-center text-white mt-8 sm:mt-12 md:mt-16 lg:mt-18 px-3 sm:px-4 md:px-6">
           {/* Couple names in elegant script */}
           <motion.h1
-            initial={{ opacity: 0, y: -40 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -90 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
-            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[6rem] font-great-vibes mb-2 sm:mb-3 md:mb-4 text-white"
+            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[6rem] font-symphony mb-2 sm:mb-3 md:mb-4 text-white"
             style={{
               textShadow:
                 "2px 2px 4px rgba(0,0,0,0.5), 4px 4px 8px rgba(0,0,0,0.3)",
               fontWeight: 400,
-              letterSpacing: "0.05em",
+              letterSpacing: "0.01sem",
             }}
           >
-            Dilum and Heshani
+            {/* <Image
+              src="/DH.png"
+              alt="Dilum and Heshani"
+              width={600}
+              height={200}
+            /> */}
+            Dilum & Heshani
           </motion.h1>
           {/* Subtitle */}
           <motion.p
