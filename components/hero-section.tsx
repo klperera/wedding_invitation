@@ -42,9 +42,9 @@ export function HeroSection() {
               filter: "blur(0px)",
             }}
             transition={{
-              duration: 1.2,
+              duration: 2,
               ease: "easeInOut",
-              filter: { duration: 1.5 },
+              filter: { duration: 2 },
             }}
             className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[6rem] font-great-vibes mb-2 sm:mb-3 md:mb-4 text-white"
             style={{
