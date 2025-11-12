@@ -108,22 +108,45 @@ export function HeroSection() {
           >
             Save the Date
           </motion.p>
+          <motion.p
+            initial={{
+              opacity: 0,
+              x: -90,
+              filter: "blur(10px)",
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              filter: "blur(0px)",
+            }}
+            transition={{
+              duration: 2,
+              ease: "easeInOut",
+              filter: { duration: 2 },
+            }}
+            className="text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-montserrat font-extrabold text-white uppercase tracking-widest"
+            style={{
+              textShadow:
+                "1px 1px 3px rgba(0,0,0,0.6), 2px 2px 6px rgba(0,0,0,0.4)",
+              fontWeight: 700,
+            }}
+          >
+            13 | December | 2025
+          </motion.p>
         </div>
         {/* Date badge (bottom-right) */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-          className="absolute bottom-6 right-4 sm:bottom-8 sm:right-8 md:bottom-10 md:right-12 z-20 text-white px-3 py-2 sm:px-4 sm:py-3 flex flex-col items-center"
+          className="absolute bottom-6 right-1/2 sm:bottom-8 md:bottom-10 z-20 text-white px-3 py-2 sm:px-4 sm:py-3 flex flex-col items-center"
           aria-label="Wedding date"
           style={{
             textShadow: "0 2px 6px rgba(0,0,0,0.7), 0 1px 0 rgba(0,0,0,0.45)",
           }}
         >
-          <span className="font-montserrat text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold uppercase mt-1">
-            13 December 2025
-          </span>
-        </motion.div>
+          <span className="font-montserrat text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold uppercase mt-1"></span>
+        </motion.div> */}
       </section>
 
       {/* <section className="w-full bg-gradient-to-b from-black/40 to-background py-16 md:py-24">
