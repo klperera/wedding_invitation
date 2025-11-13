@@ -14,7 +14,8 @@ export default function WeddingInvitation() {
       <div
         className="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed py-16 px-4 sm:px-6 md:px-8"
         style={{
-          backgroundImage: "url('/full Background.jpg')",
+          backgroundImage: "url('/full%20Background.jpg')",
+          backgroundColor: "#f5f5f5",
         }}
       >
         {/* <EnvelopeCard /> */}
