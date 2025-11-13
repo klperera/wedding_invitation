@@ -18,7 +18,7 @@ export function EnvelopeCard() {
 
       {/* Envelope image */}
       <Image
-        src="/invitation.jpg"
+        src="/invitation.jpeg"
         alt="Envelope"
         width={800}
         height={300}

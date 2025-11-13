@@ -5,6 +5,7 @@ import { CountdownTimer } from "@/components/countdown-timer";
 import { RSVPSection } from "@/components/rsvp-section";
 import { WeddingFooter } from "@/components/wedding-footer";
 import { ImageGallery } from "@/components/image-gallery";
+import { EnvelopeCard } from "@/components/envelope-card";
 
 export default function WeddingInvitation() {
   return (
@@ -24,9 +25,10 @@ export default function WeddingInvitation() {
 
         {/* Content layer */}
         <div className="relative z-10">
+          <EnvelopeCard />
           <CountdownTimer />
           <WeddingAgenda />
-          <ImageGallery />
+          {/* <ImageGallery /> */}
           <LocationMaps />
           <RSVPSection />
         </div>
