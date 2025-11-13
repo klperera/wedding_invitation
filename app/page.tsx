@@ -28,9 +28,9 @@ export default function WeddingInvitation() {
           <EnvelopeCard />
           <CountdownTimer />
           <WeddingAgenda />
-          {/* <ImageGallery /> */}
           <LocationMaps />
           <RSVPSection />
+          <ImageGallery />
         </div>
       </div>
 

@@ -1,11 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export function LocationMaps() {
   return (
-    <section className="py-8 sm:py-12 md:py-16 lg:py-20">
-      <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+    <section className="py-8 sm:py-12 md:py-16 lg:py-20 relative">
+      {/* Background Image */}
+      <div className="absolute inset-0 w-full h-full">
+        <Image
+          src="/Elegant Event.png"
+          alt="Wedding Venue Background"
+          fill
+          className="object-cover object-center"
+          quality={100}
+        />
+        {/* Overlay for text readability */}
+        <div className="absolute inset-0 bg-white/75"></div>
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl relative z-10">
         {/* ADDRESS Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -21,18 +35,6 @@ export function LocationMaps() {
         </motion.h2>
 
         <div className="flex items-start gap-4 sm:gap-6 md:gap-8">
-          {/* Decorative Timeline Line with Diamond Markers */}
-          <div className="flex flex-col items-center pt-2">
-            {/* Top Diamond */}
-            <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-black rotate-45 mb-8 sm:mb-10 md:mb-12"></div>
-
-            {/* Vertical Line */}
-            <div className="w-0.5 sm:w-1 bg-black flex-1"></div>
-
-            {/* Bottom Diamond */}
-            <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-black rotate-45 mt-8 sm:mt-10 md:mt-12"></div>
-          </div>
-
           {/* Content Column */}
           <div className="flex-1 space-y-6 sm:space-y-7 md:space-y-8 lg:space-y-10">
             {/* Wedding Ceremony Section */}
@@ -41,17 +43,33 @@ export function LocationMaps() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="space-y-2 sm:space-y-3"
+              className="space-y-2 sm:space-y-3 flex items-start gap-4"
             >
-              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-great-vibes text-black mb-1">
-                Wedding Ceremony
-              </h3>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl font-montserrat text-gray-700 leading-relaxed">
-                St. Mary&apos;s Church, Thudella, Ja ela
-              </p>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl font-montserrat text-gray-700 leading-relaxed">
-                Time : 3.30PM
-              </p>
+              {/* Diamond Marker for Ceremony */}
+              <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-black rotate-45 mt-2"></div>
+
+              <div className="flex-1">
+                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-great-vibes text-black mb-1">
+                  Wedding Ceremony
+                </h3>
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl font-montserrat text-gray-700 leading-relaxed">
+                  St. Mary&apos;s Church, Thudella, Ja ela
+                </p>
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl font-montserrat text-gray-700 leading-relaxed">
+                  Time : 3.30PM
+                </p>
+                <button
+                  onClick={() =>
+                    window.open(
+                      "https://maps.google.com/?q=St.+Mary's+Church+Thudella+Ja+Ela",
+                      "_blank"
+                    )
+                  }
+                  className="mt-3 sm:mt-4 px-4 sm:px-6 py-2 sm:py-2.5 border-2 border-black bg-black text-white font-montserrat uppercase tracking-wider text-xs sm:text-sm hover:bg-white hover:text-black transition-colors duration-300"
+                >
+                  Get Directions
+                </button>
+              </div>
             </motion.div>
 
             {/* Reception Section */}
@@ -60,17 +78,33 @@ export function LocationMaps() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-2 sm:space-y-3"
+              className="space-y-2 sm:space-y-3 flex items-start gap-4"
             >
-              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-great-vibes text-black mb-1">
-                Reception
-              </h3>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl font-montserrat text-gray-700 leading-relaxed">
-                Hotel Royal Ramesses, Adriana Ballroom, Seeduwa
-              </p>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl font-montserrat text-gray-700 leading-relaxed">
-                Time : 7.00PM
-              </p>
+              {/* Diamond Marker for Reception */}
+              <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-black rotate-45 mt-2"></div>
+
+              <div className="flex-1">
+                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-great-vibes text-black mb-1">
+                  Reception
+                </h3>
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl font-montserrat text-gray-700 leading-relaxed">
+                  Hotel Royal Ramesses, Adriana Ballroom, Seeduwa
+                </p>
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl font-montserrat text-gray-700 leading-relaxed">
+                  Time : 7.00PM
+                </p>
+                <button
+                  onClick={() =>
+                    window.open(
+                      "https://maps.google.com/?q=Hotel+Royal+Ramesses+Seeduwa",
+                      "_blank"
+                    )
+                  }
+                  className="mt-3 sm:mt-4 px-4 sm:px-6 py-2 sm:py-2.5 border-2 border-black bg-black text-white font-montserrat uppercase tracking-wider text-xs sm:text-sm hover:bg-white hover:text-black transition-colors duration-300"
+                >
+                  Get Directions
+                </button>
+              </div>
             </motion.div>
           </div>
         </div>
