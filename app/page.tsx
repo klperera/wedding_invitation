@@ -11,23 +11,27 @@ export default function WeddingInvitation() {
     <main className="min-h-screen">
       {/* <WeddingHeader /> */}
       <HeroSection />
-      <div
-        className="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed py-16 px-4 sm:px-6 md:px-8"
-        style={{
-          backgroundImage: "url('/fullBackground.jpeg')",
-          backgroundColor: "#f5f5f5",
-        }}
-      >
-        {/* <EnvelopeCard /> */}
-        {/* <InvitationEnvelope /> */}
-        {/* <InvitationDetails /> */}
-        <CountdownTimer />
-        {/* <DressCode /> */}
-        <WeddingAgenda />
-        <ImageGallery />
-        <LocationMaps />
-        <RSVPSection />
+      <div className="relative min-h-screen py-16 px-4 sm:px-6 md:px-8 overflow-hidden">
+        {/* Background layer */}
+        <div
+          className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('/fullBackground.jpeg')",
+            backgroundColor: "#f5f5f5",
+            zIndex: -1,
+          }}
+        ></div>
+
+        {/* Content layer */}
+        <div className="relative z-10">
+          <CountdownTimer />
+          <WeddingAgenda />
+          <ImageGallery />
+          <LocationMaps />
+          <RSVPSection />
+        </div>
       </div>
+
       <WeddingFooter />
     </main>
   );
