@@ -4,8 +4,8 @@ export function EnvelopeCard() {
   return (
     <div className="relative w-full">
       {/* Invitation text overlay */}
-      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10 text-center px-4 sm:px-6 md:px-8 max-w-2xl">
-        <div className="bg-white/90 backdrop-blur-sm rounded-lg p-6 sm:p-8 md:p-10 shadow-lg border border-gray-200">
+      {/* <div className="absolute top-56 left-1/2 transform -translate-x-1/2 z-10 text-center px-4 sm:px-6 md:px-8 max-w-2xl">
+        <div className="p-6 sm:p-8 md:p-10">
           <p className="font-great-vibes text-2xl sm:text-3xl md:text-4xl text-gray-800 leading-relaxed mb-4">
             With hearts full of love, we joyfully invite you to share in the
             celebration of our forever.
@@ -14,7 +14,7 @@ export function EnvelopeCard() {
             Your presence will add joy and meaning to our special day.
           </p>
         </div>
-      </div>
+      </div> */}
 
       {/* Envelope image */}
       <Image

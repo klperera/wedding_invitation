@@ -3,7 +3,9 @@
 import type React from "react";
 
 import { useState } from "react";
-import CircularGallery from "./CircularGallery";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/button";
+import { Upload } from "lucide-react";
 
 export function ImageGallery() {
   const [images, setImages] = useState([
@@ -34,7 +36,7 @@ export function ImageGallery() {
         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-great-vibes text-center text-black mb-8 sm:mb-10 md:mb-12">
           Our Journey Together
         </h2>
-        <div className="h-screen relative">
+        {/* <div className="h-screen relative">
           <CircularGallery
             items={[
               { image: "/countdown.jpeg", text: "" },
@@ -48,9 +50,9 @@ export function ImageGallery() {
             borderRadius={0.05}
             scrollEase={0.01}
           />
-        </div>
+        </div> */}
 
-        {/* <div className="max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto">
+        <div className="max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto">
           <Card className="mb-6 sm:mb-7 md:mb-8 border-2 border-black">
             <CardHeader>
               <CardTitle className="text-center text-black font-great-vibes text-2xl sm:text-3xl md:text-4xl">
@@ -84,7 +86,7 @@ export function ImageGallery() {
               </div>
             </CardContent>
           </Card>
-        </div> */}
+        </div>
       </div>
     </section>
   );

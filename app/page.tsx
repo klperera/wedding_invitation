@@ -5,21 +5,19 @@ import { CountdownTimer } from "@/components/countdown-timer";
 import { RSVPSection } from "@/components/rsvp-section";
 import { WeddingFooter } from "@/components/wedding-footer";
 import { ImageGallery } from "@/components/image-gallery";
-import { EnvelopeCard } from "@/components/envelope-card";
-import { url } from "inspector";
 
 export default function WeddingInvitation() {
   return (
-    <main className="min-h-screen bg-sidebar-accent-foreground">
+    <main className="min-h-screen">
       {/* <WeddingHeader /> */}
       <HeroSection />
       <div
-        className="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed"
+        className="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed py-16 px-4 sm:px-6 md:px-8"
         style={{
           backgroundImage: "url('/full Background.jpg')",
         }}
       >
-        <EnvelopeCard />
+        {/* <EnvelopeCard /> */}
         {/* <InvitationEnvelope /> */}
         {/* <InvitationDetails /> */}
         <CountdownTimer />
@@ -29,7 +27,6 @@ export default function WeddingInvitation() {
         <LocationMaps />
         <RSVPSection />
       </div>
-
       <WeddingFooter />
     </main>
   );
