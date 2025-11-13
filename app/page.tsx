@@ -14,7 +14,7 @@ export default function WeddingInvitation() {
       <div
         className="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed py-16 px-4 sm:px-6 md:px-8"
         style={{
-          backgroundImage: "url('/full%20Background.jpg')",
+          backgroundImage: "url('/fullBackground.jpeg')",
           backgroundColor: "#f5f5f5",
         }}
       >
