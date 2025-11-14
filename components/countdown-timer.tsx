@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 export function CountdownTimer() {
   const [timeLeft, setTimeLeft] = useState({
@@ -52,7 +53,7 @@ export function CountdownTimer() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-great-vibes text-center text-black mb-8 sm:mb-10 md:mb-12"
         >
-          D Day is coming!
+          The Big Day is coming!
         </motion.h2>
 
         {/* Countdown Timer */}
@@ -77,12 +78,31 @@ export function CountdownTimer() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.6 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 font-montserrat tracking-widest"
+            className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 font-montserrat tracking-widest uppercase"
           >
             Days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hours&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minutes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Seconds
           </motion.div>
         </motion.div>
       </div>
+      {/* Full-bleed image below countdown */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="mt-6 sm:mt-8"
+      >
+        <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-48 sm:h-64 md:h-80 lg:h-[28rem] xl:h-[32rem]">
+          <Image
+            src="/countdownImage.jpg"
+            alt="Wedding moments montage"
+            fill
+            priority={false}
+            className="object-cover"
+            style={{ objectPosition: "30% 50%" }}
+          />
+        </div>
+      </motion.div>
     </motion.section>
   );
 }

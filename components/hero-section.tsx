@@ -7,13 +7,7 @@ export function HeroSection() {
     <>
       <section className="relative w-full h-screen flex items-start justify-center overflow-hidden">
         {/* Hero background image */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.8 }}
-          className="absolute inset-0 w-full h-full"
-        >
+        <div className="absolute inset-0 w-full h-full">
           <Image
             src="/Hero image.jpeg"
             alt="Hero Background"
@@ -25,7 +19,7 @@ export function HeroSection() {
             unoptimized
           />
           {/* <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-b from-transparent to-[#f4f4f4]/80"></div> */}
-        </motion.div>
+        </div>
 
         {/* Text overlay content */}
         <div className="relative z-10 text-center text-white mt-4 sm:mt-6 px-3 sm:px-4 md:px-6">

@@ -61,7 +61,7 @@ export function WeddingAgenda() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="text-base sm:text-lg md:text-xl lg:text-2xl font-montserrat text-gray-700 tracking-wide"
+                className="text-base sm:text-lg md:text-xl lg:text-2xl font-montserrat text-gray-700 tracking-wide transform rotate-180 origin-center"
                 style={{
                   writingMode: "vertical-lr",
                   textOrientation: "mixed",
