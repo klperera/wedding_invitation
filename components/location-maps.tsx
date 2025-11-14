@@ -12,12 +12,12 @@ export function LocationMaps() {
           src="/Elegant Event.png"
           alt="Wedding Venue Background"
           fill
-          className="object-cover object-center"
+          className="object-cover object-center opacity-20"
           quality={100}
           priority
         />
         {/* Overlay for text readability */}
-        <div className="absolute inset-0 bg-white/75"></div>
+        {/* <div className="absolute inset-0"></div> */}
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl relative z-10">
