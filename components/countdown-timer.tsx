@@ -97,7 +97,7 @@ export function CountdownTimer() {
             src="/countdownImage.jpg"
             alt="Wedding moments montage"
             fill
-            priority={false}
+            priority
             className="object-cover"
             style={{ objectPosition: "30% 50%" }}
           />
