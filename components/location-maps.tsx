@@ -7,13 +7,14 @@ export function LocationMaps() {
   return (
     <section className="py-8 sm:py-12 md:py-16 lg:py-20 relative">
       {/* Background Image */}
-      <div className="absolute inset-0 w-full h-full">
+      <div className="absolute inset-0 w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
         <Image
           src="/Elegant Event.png"
           alt="Wedding Venue Background"
           fill
           className="object-cover object-center"
           quality={100}
+          priority
         />
         {/* Overlay for text readability */}
         <div className="absolute inset-0 bg-white/75"></div>
