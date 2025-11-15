@@ -92,7 +92,7 @@ export function CountdownTimer() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="mt-6 sm:mt-8"
       >
-        <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-64 sm:h-80 md:h-96 lg:h-[36rem] xl:h-[44rem]">
+        <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-64 sm:h-80 md:h-96 lg:h-144 xl:h-176">
           <Image
             src="/countdownImage.jpg"
             alt="Wedding moments montage"

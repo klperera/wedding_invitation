@@ -54,32 +54,31 @@ export function RSVPSection() {
           Please let us know before December 10th if you will be attending
         </motion.p> */}
 
-        {/* <Image
+        <Image
           src="/Rsvp.jpeg"
           alt="RSVP Decorative"
           className="mb-8 sm:mb-10 md:mb-12 lg:mb-14 w-screen h-full object-cover object-center"
           width={600}
           height={150}
-        /> */}
-        <motion.div
+        />
+        {/* <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mt-6 sm:mt-8"
         >
-          <div className="relative w-screen h-full left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+          <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-full">
             <Image
               src="/Rsvp.jpeg"
-              alt="Wedding moments montage"
-              priority
-              className="object-cover"
+              alt="rsvp"
               width={600}
               height={150}
-              style={{ objectPosition: "50% 80%" }}
+              priority
+              className="mb-8 sm:mb-10 md:mb-12 lg:mb-14 w-screen h-full object-cover object-center"
             />
           </div>
-        </motion.div>
+        </motion.div> */}
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -104,7 +103,7 @@ export function RSVPSection() {
               <div className="space-y-3">
                 <button
                   onClick={() => handleWhatsApp("94764919991")}
-                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-white text-black hover:bg-[#00671d] rounded-lg hover:text-white transition-colors duration-300 flex items-center justify-center gap-2 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-wider"
+                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-white text-black hover:bg-[#00671d] rounded-lg hover:text-white transition-colors duration-300 flex items-center justify-center gap-2 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-wider cursor-pointer"
                 >
                   <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4" />
                   <span className="hidden sm:inline">
@@ -114,7 +113,7 @@ export function RSVPSection() {
                 </button>
                 <button
                   onClick={() => window.open("tel:+94764919991")}
-                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-white text-black hover:bg-black hover:text-white rounded-lg transition-colors duration-300 flex items-center justify-center gap-2 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-wider"
+                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-white text-black hover:bg-black hover:text-white rounded-lg transition-colors duration-300 flex items-center justify-center gap-2 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-wider cursor-pointer"
                 >
                   <Phone className="w-3 h-3 sm:w-4 sm:h-4" />
                   <span className="hidden sm:inline">Call: 076-4919991</span>
@@ -131,7 +130,7 @@ export function RSVPSection() {
               <div className="space-y-3">
                 <button
                   onClick={() => handleWhatsApp("94775314997")}
-                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-white text-black hover:bg-[#00671d] hover:text-white transition-colors rounded-lg duration-300 flex items-center justify-center gap-2 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-wider"
+                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-white text-black hover:bg-[#00671d] hover:text-white transition-colors rounded-lg duration-300 flex items-center justify-center gap-2 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-wider cursor-pointer"
                 >
                   <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4" />
                   <span className="hidden sm:inline">
@@ -141,7 +140,7 @@ export function RSVPSection() {
                 </button>
                 <button
                   onClick={() => window.open("tel:+94775314997")}
-                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-white text-black hover:bg-black hover:text-white transition-colors rounded-lg duration-300 flex items-center justify-center gap-2 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-wider"
+                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-white text-black hover:bg-black hover:text-white transition-colors rounded-lg duration-300 flex items-center justify-center gap-2 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-wider cursor-pointer"
                 >
                   <Phone className="w-3 h-3 sm:w-4 sm:h-4" />
                   <span className="hidden sm:inline">Call: 077-5314997</span>
@@ -158,14 +157,11 @@ export function RSVPSection() {
           <div className="text-center">
             <button
               onClick={handleCalendar}
-              className="w-full sm:w-auto px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-3.5 border-2 border-black bg-black text-white hover:bg-white hover:text-black transition-colors duration-300 flex items-center justify-center gap-2 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-wider mx-auto"
+              className="w-full sm:w-auto px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-3.5 border-2 border-black bg-black text-white hover:bg-white hover:text-black transition-colors duration-300 flex items-center justify-center gap-2 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-wider mx-auto cursor-pointer"
             >
               <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
               Add to Calendar
             </button>
-            <p className="text-center text-xs sm:text-sm text-gray-500 mt-4 sm:mt-6 font-montserrat italic">
-              (Regrets Only)
-            </p>
           </div>
         </motion.div>
       </div>

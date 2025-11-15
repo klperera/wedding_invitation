@@ -11,8 +11,9 @@ export function LocationMaps() {
         <Image
           src="/Elegant Event.png"
           alt="Wedding Venue Background"
-          fill
-          className="object-cover object-center opacity-20"
+          width={1920}
+          height={1080}
+          className="object-cover object-center opacity-20 h-full"
           quality={100}
           priority
         />
@@ -37,7 +38,7 @@ export function LocationMaps() {
 
         <div className="flex items-start gap-4 sm:gap-6 md:gap-8">
           {/* Content Column */}
-          <div className="flex-1 space-y-6 sm:space-y-7 md:space-y-8 lg:space-y-10">
+          <div className="flex-1 space-y-14 sm:space-y-16 md:space-y-18 lg:space-y-20">
             {/* Wedding Ceremony Section */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -66,7 +67,7 @@ export function LocationMaps() {
                       "_blank"
                     )
                   }
-                  className="mt-3 sm:mt-4 px-4 sm:px-6 py-2 sm:py-2.5 border-2 border-black bg-black text-white font-montserrat uppercase tracking-wider text-xs sm:text-sm hover:bg-white hover:text-black transition-colors duration-300"
+                  className="mt-3 sm:mt-4 px-4 sm:px-6 py-2 sm:py-2.5 border-2 border-black bg-black text-white font-montserrat uppercase tracking-wider text-xs sm:text-sm hover:bg-white hover:text-black transition-colors duration-300 cursor-pointer"
                 >
                   Get Directions
                 </button>
@@ -101,7 +102,7 @@ export function LocationMaps() {
                       "_blank"
                     )
                   }
-                  className="mt-3 sm:mt-4 px-4 sm:px-6 py-2 sm:py-2.5 border-2 border-black bg-black text-white font-montserrat uppercase tracking-wider text-xs sm:text-sm hover:bg-white hover:text-black transition-colors duration-300"
+                  className="mt-3 sm:mt-4 px-4 sm:px-6 py-2 sm:py-2.5 border-2 border-black bg-black text-white font-montserrat uppercase tracking-wider text-xs sm:text-sm hover:bg-white hover:text-black transition-colors duration-300 cursor-pointer"
                 >
                   Get Directions
                 </button>

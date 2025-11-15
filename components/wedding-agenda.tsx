@@ -45,7 +45,7 @@ const events = [
 
 export function WeddingAgenda() {
   return (
-    <section className="pt-8 sm:pt-12 md:pt-16 lg:pt-20">
+    <section className="py-8 sm:py-12 md:py-16 lg:py-20">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
         {/* Handwritten "Timing" Header */}
         <motion.h2
