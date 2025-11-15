@@ -53,7 +53,7 @@ export function CountdownTimer() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-great-vibes text-center text-black mb-8 sm:mb-10 md:mb-12"
         >
-          The Big Day is coming!
+          The Day is coming!
         </motion.h2>
 
         {/* Countdown Timer */}
@@ -92,14 +92,14 @@ export function CountdownTimer() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="mt-6 sm:mt-8"
       >
-        <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-48 sm:h-64 md:h-80 lg:h-[28rem] xl:h-[32rem]">
+        <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-64 sm:h-80 md:h-96 lg:h-[36rem] xl:h-[44rem]">
           <Image
             src="/countdownImage.jpg"
             alt="Wedding moments montage"
             fill
             priority
             className="object-cover"
-            style={{ objectPosition: "30% 50%" }}
+            style={{ objectPosition: "50% 80%" }}
           />
         </div>
       </motion.div>

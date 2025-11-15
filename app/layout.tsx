@@ -7,6 +7,7 @@ import {
   Great_Vibes,
 } from "next/font/google";
 import "./globals.css";
+import { ClientLayout } from "@/components/client-layout";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -99,7 +100,9 @@ export default function RootLayout({
       lang="en"
       className={`${playfair.variable} ${montserrat.variable} ${dancingScript.variable} ${greatVibes.variable} antialiased text-white`}
     >
-      <body className="font-montserrat bg-black">{children}</body>
+      <body className="font-montserrat bg-black">
+        <ClientLayout>{children}</ClientLayout>
+      </body>
     </html>
   );
 }
