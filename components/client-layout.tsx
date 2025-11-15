@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { SplashScreen } from "./splash-screen";
 
 export function ClientLayout({ children }: { children: React.ReactNode }) {
