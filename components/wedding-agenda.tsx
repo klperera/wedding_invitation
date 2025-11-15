@@ -5,35 +5,42 @@ import { motion } from "framer-motion";
 export function WeddingAgenda() {
   const events = [
     {
-      time: "15:00",
-      title: "Arrivals",
-      description: "Gathering of guests, introductions and entertainment!",
+      time: "3:30 PM",
+      title: "Wedding Ceremony",
+      description: `The “We Do” Moment
+                    Walking down the aisle to forever begins with God.`,
     },
     {
-      time: "16:30",
-      title: "Wedding ceremony",
+      time: "7:00 PM",
+      title: "Reception & After Party",
+      description: "Welcome, take your seats and feel the love in the air.",
+    },
+    {
+      time: "7:30 PM",
+      title: "Toast and Speeches",
       description:
-        "The most important event in our lives in a beautiful setting!",
+        "Raising our glasses to love, laughter, and a lifetime together.",
     },
     {
-      time: "17:00",
-      title: "Delightful Tea",
-      description: "Let's capture this moment forever!",
+      time: "8:00 PM",
+      title: "Cocktail Hour",
+      description: "Savor the flavors, share a dance, and enjoy the moment.",
     },
     {
-      time: "17:30",
-      title: "Wedding buffet",
-      description: "Time for delicious food, dancing and fun!",
+      time: "8:30 PM",
+      title: "Portrait Time",
+      description: "Let's capture these moments to cherish forever!",
     },
     {
-      time: "21:30",
-      title: "Wedding cake",
-      description: "Time for a beautiful ending to the evening!",
+      time: "9:00 PM",
+      title: "Dinner",
+      description:
+        "A feast of flavors and happiness shared with our dearest ones.",
     },
     {
-      time: "23:00",
-      title: "Afterparty",
-      description: "Party!",
+      time: "12:00 AM",
+      title: "Fireworks",
+      description: "A sparkling finale to a night filled with love and magic.",
     },
   ];
 
