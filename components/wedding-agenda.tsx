@@ -2,51 +2,50 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+const events = [
+  {
+    time: "3:30 PM",
+    title: "Wedding Ceremony",
+    header: "The “We Do” Moment",
+    description: `Walking down the aisle to forever begins with God.`,
+  },
+  {
+    time: "7:00 PM",
+    title: "Reception & After Party",
+    description: "Welcome, take your seats and feel the love in the air.",
+  },
+  {
+    time: "7:30 PM",
+    title: "Toast and Speeches",
+    description:
+      "Raising our glasses to love, laughter, and a lifetime together.",
+  },
+  {
+    time: "7:45 PM",
+    title: "Cocktail Hour",
+    description: "Savor the flavors, share a dance, and enjoy the moment.",
+  },
+  {
+    time: "8:00 PM",
+    title: "Portrait Time",
+    description: "Let's capture moments to cherish forever!",
+  },
+  {
+    time: "8:30 PM",
+    title: "Dinner",
+    description:
+      "A feast of flavors and happiness shared with our dearest ones.",
+  },
+  {
+    time: "12:00 AM",
+    title: "Fireworks",
+    description: "A sparkling finale to a night filled with love and magic.",
+  },
+];
 
 export function WeddingAgenda() {
-  const events = [
-    {
-      time: "3:30 PM",
-      title: "Wedding Ceremony",
-      header: "The “We Do” Moment",
-      description: `Walking down the aisle to forever begins with God.`,
-    },
-    {
-      time: "7:00 PM",
-      title: "Reception & After Party",
-      description: "Welcome, take your seats and feel the love in the air.",
-    },
-    {
-      time: "7:30 PM",
-      title: "Toast and Speeches",
-      description:
-        "Raising our glasses to love, laughter, and a lifetime together.",
-    },
-    {
-      time: "7:45 PM",
-      title: "Cocktail Hour",
-      description: "Savor the flavors, share a dance, and enjoy the moment.",
-    },
-    {
-      time: "8:00 PM",
-      title: "Portrait Time",
-      description: "Let's capture moments to cherish forever!",
-    },
-    {
-      time: "8:30 PM",
-      title: "Dinner",
-      description:
-        "A feast of flavors and happiness shared with our dearest ones.",
-    },
-    {
-      time: "12:00 AM",
-      title: "Fireworks",
-      description: "A sparkling finale to a night filled with love and magic.",
-    },
-  ];
-
   return (
-    <section className="py-8 sm:py-12 md:py-16 lg:py-20">
+    <section className="pt-8 sm:pt-12 md:pt-16 lg:pt-20">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
         {/* Handwritten "Timing" Header */}
         <motion.h2
