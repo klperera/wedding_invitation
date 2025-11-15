@@ -31,8 +31,7 @@ export function RSVPSection() {
   };
 
   return (
-    //py-8 sm:py-12 md:py-16 lg:py-20
-    <section>
+    <section className="py-8 sm:py-12 md:py-16 lg:py-20">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
         {/* Header */}
         {/* <motion.h2
@@ -55,13 +54,32 @@ export function RSVPSection() {
           Please let us know before December 10th if you will be attending
         </motion.p> */}
 
-        <Image
+        {/* <Image
           src="/Rsvp.jpeg"
           alt="RSVP Decorative"
-          className="mx-auto mb-8 sm:mb-10 md:mb-12 lg:mb-14 w-full h-full object-cover object-center"
+          className="mb-8 sm:mb-10 md:mb-12 lg:mb-14 w-screen h-full object-cover object-center"
           width={600}
           height={150}
-        />
+        /> */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="mt-6 sm:mt-8"
+        >
+          <div className="relative w-screen h-full left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+            <Image
+              src="/Rsvp.jpeg"
+              alt="Wedding moments montage"
+              priority
+              className="object-cover"
+              width={600}
+              height={150}
+              style={{ objectPosition: "50% 80%" }}
+            />
+          </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
