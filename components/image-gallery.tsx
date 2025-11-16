@@ -3,16 +3,21 @@
 import type React from "react";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Upload } from "lucide-react";
+import { AnimatedImageGallery } from "./ui/animated-image-gallery";
 
 export function ImageGallery() {
   const [images, setImages] = useState([
-    "/couple-engagement.png",
-    "/romantic-couple.png",
-    "/casual-couple.png",
-    "/formal-couple.png",
+    "/countdown.jpeg",
+    "/countdownImage.jpg",
+    "/DSC_8816.jpg",
+    "/DSC_9240.jpg",
+    "/DSC_9528.jpg",
+    "/Hero image.jpeg",
+    "/timeline.jpg",
   ]);
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,30 +35,35 @@ export function ImageGallery() {
     }
   };
 
+  // Prepare images for AnimatedImageGallery
+  const galleryImages = images.map((src, index) => ({
+    src,
+    alt: `Wedding moment ${index + 1}`,
+    ratio: index % 2 === 0 ? 9 / 16 : 16 / 9, // Alternate portrait and landscape
+  }));
+
   return (
     <section className="py-8 sm:py-12 md:py-14 lg:py-16">
       <div className="container mx-auto px-4 sm:px-6 md:px-8">
-        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-great-vibes text-center text-black mb-8 sm:mb-10 md:mb-12">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-great-vibes text-center text-black mb-8 sm:mb-10 md:mb-12"
+        >
           Our Journey Together
-        </h2>
-        {/* <div className="h-screen relative">
-          <CircularGallery
-            items={[
-              { image: "/countdown.jpeg", text: "" },
-              {
-                image: "/Hero image.jpeg",
-                text: "",
-              },
-            ]}
-            bend={1}
-            textColor="#000000"
-            borderRadius={0.05}
-            scrollEase={0.01}
-          />
-        </div> */}
+        </motion.h2>
 
-        <div className="max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto">
-          <Card className="mb-6 sm:mb-7 md:mb-8 border-2 border-black">
+        {/* Upload Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto mb-10"
+        >
+          {/* <Card className="border-2 border-black">
             <CardHeader>
               <CardTitle className="text-center text-black font-great-vibes text-2xl sm:text-3xl md:text-4xl">
                 Share Your Memories
@@ -85,8 +95,11 @@ export function ImageGallery() {
                 </p>
               </div>
             </CardContent>
-          </Card>
-        </div>
+          </Card> */}
+        </motion.div>
+
+        {/* Animated Gallery */}
+        <AnimatedImageGallery images={galleryImages} columns={3} />
       </div>
     </section>
   );
