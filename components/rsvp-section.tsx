@@ -103,7 +103,7 @@ export function RSVPSection() {
               <div className="space-y-3">
                 <button
                   onClick={() => handleWhatsApp("94764919991")}
-                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-white text-black hover:bg-[#00671d] rounded-lg hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-wider cursor-pointer active:scale-95 active:opacity-80 touch-manipulation"
+                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-[#863d24] text-black hover:bg-black rounded-lg hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-wider font-bold cursor-pointer active:scale-95 active:opacity-80 touch-manipulation"
                 >
                   <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4" />
                   <span className="hidden sm:inline">
@@ -113,7 +113,7 @@ export function RSVPSection() {
                 </button>
                 <button
                   onClick={() => window.open("tel:+94764919991")}
-                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-white text-black hover:bg-black hover:text-white rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-wider cursor-pointer active:scale-95 active:opacity-80 touch-manipulation"
+                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-white text-black hover:bg-black hover:text-white rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-montserrat font-bold text-xs sm:text-sm md:text-base uppercase tracking-wider cursor-pointer active:scale-95 active:opacity-80 touch-manipulation"
                 >
                   <Phone className="w-3 h-3 sm:w-4 sm:h-4" />
                   <span className="hidden sm:inline">Call: 076-4919991</span>
@@ -130,7 +130,7 @@ export function RSVPSection() {
               <div className="space-y-3">
                 <button
                   onClick={() => handleWhatsApp("94775314997")}
-                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-white text-black hover:bg-[#00671d] hover:text-white transition-all rounded-lg duration-300 flex items-center justify-center gap-2 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-wider cursor-pointer active:scale-95 active:opacity-80 touch-manipulation"
+                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-[#863d24] text-black hover:bg-black hover:text-white transition-all rounded-lg duration-300 flex items-center justify-center gap-2 font-montserrat font-bold text-xs sm:text-sm md:text-base uppercase tracking-wider cursor-pointer active:scale-95 active:opacity-80 touch-manipulation"
                 >
                   <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4" />
                   <span className="hidden sm:inline">
@@ -140,7 +140,7 @@ export function RSVPSection() {
                 </button>
                 <button
                   onClick={() => window.open("tel:+94775314997")}
-                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-white text-black hover:bg-black hover:text-white transition-all rounded-lg duration-300 flex items-center justify-center gap-2 font-montserrat text-xs sm:text-sm md:text-base uppercase tracking-wider cursor-pointer active:scale-95 active:opacity-80 touch-manipulation"
+                  className="w-full px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-black bg-white text-black hover:bg-black hover:text-white transition-all rounded-lg duration-300 flex items-center justify-center gap-2 font-montserrat font-bold text-xs sm:text-sm md:text-base uppercase tracking-wider cursor-pointer active:scale-95 active:opacity-80 touch-manipulation"
                 >
                   <Phone className="w-3 h-3 sm:w-4 sm:h-4" />
                   <span className="hidden sm:inline">Call: 077-5314997</span>

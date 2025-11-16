@@ -21,13 +21,12 @@ import Image from "next/image";
 export function ImageGallery() {
   const [images, setImages] = useState([
     "/DSC_9528.jpg",
-    "/DSC_9240.jpg",
+    "/DSC_9624.jpg",
     "/countdown.jpeg",
-    "/countdownImage.jpg",
-    "/DSC_8816.jpg",
-    "/timeline.jpg",
     "/IMG_1.jpeg",
-    "/IMG_2.jpeg",
+    "/DSC_8816.jpg",
+    "/DSC_9569.jpg",
+    "/DSC_9240.jpg",
   ]);
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -78,7 +77,7 @@ export function ImageGallery() {
         className="max-w-lg sm:max-w-xl md:max-w-2xl mx-auto relative py-12"
       >
         {/* Oval shape background */}
-        <div className="relative w-full aspect-5/3">
+        <div className="relative w-full aspect-5/4">
           <Image
             src="/ovalshape.png"
             alt="Decorative oval"
@@ -90,7 +89,7 @@ export function ImageGallery() {
           <div className="absolute inset-0 flex items-center justify-center px-12 sm:px-16 md:px-20 py-8 sm:py-10">
             <div className="text-center w-full">
               <h3 className="text-black font-great-vibes text-2xl sm:text-3xl md:text-4xl mb-4 sm:mb-6">
-                Share Your Memories
+                Share Your Memories with us
               </h3>
 
               <input
@@ -104,7 +103,7 @@ export function ImageGallery() {
               <label htmlFor="image-upload">
                 <Button
                   asChild
-                  className="bg-black hover:bg-gray-800 text-white px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 text-xs sm:text-sm md:text-base"
+                  className="bg-[#863d24] hover:bg-gray-800 text-white px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 text-xs sm:text-sm md:text-base"
                 >
                   <span className="cursor-pointer">
                     <Upload className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
@@ -112,9 +111,9 @@ export function ImageGallery() {
                   </span>
                 </Button>
               </label>
-              <p className="text-xs sm:text-sm text-gray-600 mt-2 font-montserrat">
+              {/* <p className="text-xs sm:text-sm text-gray-600 mt-2 font-montserrat">
                 Share your favorite moments with us!
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

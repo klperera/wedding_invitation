@@ -12,7 +12,7 @@ export default function WeddingInvitation() {
     <main className="min-h-screen">
       {/* <WeddingHeader /> */}
       <HeroSection />
-      <div className="relative min-h-screen py-16 px-4 sm:px-6 md:px-8 overflow-hidden">
+      <div className="relative min-h-screen py-8 px-4 sm:px-6 md:px-8 overflow-hidden">
         {/* Background layer */}
         <div
           className="fixed inset-0 bg-cover bg-center bg-no-repeat"

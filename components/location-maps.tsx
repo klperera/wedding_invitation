@@ -67,7 +67,7 @@ export function LocationMaps() {
                       "_blank"
                     )
                   }
-                  className="mt-3 sm:mt-4 px-4 sm:px-6 py-2 sm:py-2.5 border-2 border-black bg-black text-white font-montserrat uppercase tracking-wider text-xs sm:text-sm hover:bg-white hover:text-black transition-all duration-300 cursor-pointer active:scale-95 active:opacity-80 touch-manipulation"
+                  className="mt-3 sm:mt-4 px-4 sm:px-6 py-2 sm:py-2.5 bg-[#863d24] text-white font-montserrat uppercase tracking-wider text-xs sm:text-sm hover:bg-white hover:text-black transition-all duration-300 cursor-pointer active:scale-95 active:opacity-80 touch-manipulation"
                 >
                   Get Directions
                 </button>
@@ -102,7 +102,7 @@ export function LocationMaps() {
                       "_blank"
                     )
                   }
-                  className="mt-3 sm:mt-4 px-4 sm:px-6 py-2 sm:py-2.5 border-2 border-black bg-black text-white font-montserrat uppercase tracking-wider text-xs sm:text-sm hover:bg-white hover:text-black transition-all duration-300 cursor-pointer active:scale-95 active:opacity-80 touch-manipulation"
+                  className="mt-3 sm:mt-4 px-4 sm:px-6 py-2 sm:py-2.5 bg-[#863d24] text-white font-montserrat uppercase tracking-wider text-xs sm:text-sm hover:bg-white hover:text-black transition-all duration-300 cursor-pointer active:scale-95 active:opacity-80 touch-manipulation"
                 >
                   Get Directions
                 </button>

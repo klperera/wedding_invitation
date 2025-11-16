@@ -23,7 +23,7 @@ export function WeddingFooter() {
         <div className="max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto">
           {/* Thank You Section */}
           <div className="mb-8 sm:mb-10 md:mb-12">
-            <h2 className="font-great-vibes text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-4 sm:mb-5 md:mb-6">
+            <h2 className="font-montserrat text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-4 sm:mb-5 md:mb-6">
               Thank
               <br />
               You
