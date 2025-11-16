@@ -1,23 +1,33 @@
 "use client";
 
-import type React from "react";
-
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { Button } from "./ui/button";
-import { Upload } from "lucide-react";
 import { AnimatedImageGallery } from "./ui/animated-image-gallery";
+import { Button } from "./ui/button";
+import { useState } from "react";
+import { Upload } from "lucide-react";
+import Image from "next/image";
+
+// const images = [
+//   "/DSC_9528.jpg",
+//   "/DSC_9240.jpg",
+//   "/countdown.jpeg",
+//   "/countdownImage.jpg",
+//   "/DSC_8816.jpg",
+//   "/timeline.jpg",
+//   "/IMG_7866.jpg",
+//   "/IMG_7876.jpg",
+// ];
 
 export function ImageGallery() {
   const [images, setImages] = useState([
+    "/DSC_9528.jpg",
+    "/DSC_9240.jpg",
     "/countdown.jpeg",
     "/countdownImage.jpg",
     "/DSC_8816.jpg",
-    "/DSC_9240.jpg",
-    "/DSC_9528.jpg",
-    "/Hero image.jpeg",
     "/timeline.jpg",
+    "/IMG_1.jpeg",
+    "/IMG_2.jpeg",
   ]);
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -55,52 +65,60 @@ export function ImageGallery() {
           Our Journey Together
         </motion.h2>
 
-        {/* Upload Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto mb-10"
-        >
-          {/* <Card className="border-2 border-black">
-            <CardHeader>
-              <CardTitle className="text-center text-black font-great-vibes text-2xl sm:text-3xl md:text-4xl">
-                Share Your Memories
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-center">
-                <input
-                  type="file"
-                  multiple
-                  accept="image/*"
-                  onChange={handleImageUpload}
-                  className="hidden"
-                  id="image-upload"
-                />
-                <label htmlFor="image-upload">
-                  <Button
-                    asChild
-                    className="bg-black hover:bg-gray-800 text-white px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 text-xs sm:text-sm md:text-base"
-                  >
-                    <span className="cursor-pointer">
-                      <Upload className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
-                      Upload Photos
-                    </span>
-                  </Button>
-                </label>
-                <p className="text-xs sm:text-sm text-gray-600 mt-2 font-montserrat">
-                  Share your favorite moments with us!
-                </p>
-              </div>
-            </CardContent>
-          </Card> */}
-        </motion.div>
-
         {/* Animated Gallery */}
         <AnimatedImageGallery images={galleryImages} columns={3} />
       </div>
+
+      {/* Upload Card with Oval Background */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="max-w-lg sm:max-w-xl md:max-w-2xl mx-auto relative py-12"
+      >
+        {/* Oval shape background */}
+        <div className="relative w-full aspect-5/3">
+          <Image
+            src="/ovalshape.png"
+            alt="Decorative oval"
+            fill
+            className="object-contain"
+          />
+
+          {/* Card content inside oval */}
+          <div className="absolute inset-0 flex items-center justify-center px-12 sm:px-16 md:px-20 py-8 sm:py-10">
+            <div className="text-center w-full">
+              <h3 className="text-black font-great-vibes text-2xl sm:text-3xl md:text-4xl mb-4 sm:mb-6">
+                Share Your Memories
+              </h3>
+
+              <input
+                type="file"
+                multiple
+                accept="image/*"
+                onChange={handleImageUpload}
+                className="hidden"
+                id="image-upload"
+              />
+              <label htmlFor="image-upload">
+                <Button
+                  asChild
+                  className="bg-black hover:bg-gray-800 text-white px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 text-xs sm:text-sm md:text-base"
+                >
+                  <span className="cursor-pointer">
+                    <Upload className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
+                    Upload Photos
+                  </span>
+                </Button>
+              </label>
+              <p className="text-xs sm:text-sm text-gray-600 mt-2 font-montserrat">
+                Share your favorite moments with us!
+              </p>
+            </div>
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 }

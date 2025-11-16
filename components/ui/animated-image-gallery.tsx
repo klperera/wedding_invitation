@@ -42,7 +42,7 @@ export function AnimatedImageGallery({
         className
       )}
     >
-      <div className="mx-auto grid w-full max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-3 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto grid w-full max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-3 ">
         {imageColumns.map((columnImages, col) => (
           <div key={col} className="grid gap-6">
             {columnImages.map((image, index) => (
