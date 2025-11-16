@@ -53,7 +53,7 @@ export function CountdownTimer() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-great-vibes text-center text-black mb-8 sm:mb-10 md:mb-12"
         >
-          The Day is coming!
+          The Day is Coming!
         </motion.h2>
 
         {/* Countdown Timer */}
