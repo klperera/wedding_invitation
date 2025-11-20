@@ -1,6 +1,6 @@
 "use client";
 
-import { Share2 } from "lucide-react";
+import { Share2, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function WeddingFooter() {
@@ -58,6 +58,35 @@ export function WeddingFooter() {
             <p className="text-xs sm:text-sm text-gray-400">
               With love and blessings from both families
             </p>
+
+            {/* Contact placeholders - user will replace these with real details */}
+            <div className="mt-4 sm:mt-5 md:mt-6">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-3 sm:gap-6">
+                <div className="flex items-center text-xs sm:text-sm md:text-base text-gray-300 font-montserrat">
+                  <Phone className="w-4 h-4 mr-2" />
+                  <a href="tel:+94762248029" className="hover:text-white">
+                    +94 76 224 8029
+                  </a>
+                </div>
+
+                <div className="flex items-center text-xs sm:text-sm md:text-base text-gray-300 font-montserrat">
+                  <Mail className="w-4 h-4 mr-2" />
+                  <a
+                    href="mailto:klperera@gmail.com"
+                    className="hover:text-white"
+                  >
+                    klperera@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="mt-4">
+                <div className="flex items-center justify-center text-xs sm:text-sm text-gray-400 font-montserrat gap-2">
+                  <span>Created by</span>
+                  <span className="text-white font-semibold">Kalpa Perera</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

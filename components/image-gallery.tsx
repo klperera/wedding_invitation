@@ -74,24 +74,24 @@ export function ImageGallery() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="max-w-lg sm:max-w-xl md:max-w-2xl mx-auto relative py-12"
+        className="max-w-md sm:max-w-xl md:max-w-2xl mx-auto relative py-8 sm:py-12"
       >
         {/* Oval shape background */}
-        <div className="relative w-full aspect-5/4">
+        <div className="relative w-full aspect-5/4 overflow-hidden">
           <Image
             src="/ovalshape.png"
             alt="Decorative oval"
             fill
-            className="object-contain"
+            className="object-cover"
           />
 
           {/* Card content inside oval */}
-          <div className="absolute inset-0 flex items-center justify-center px-12 sm:px-16 md:px-20 py-8 sm:py-10">
-            <div className="text-center w-full">
-              <h3 className="text-black font-montserrat text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6 italic font-bold">
+          <div className="absolute inset-0 flex items-center justify-center px-6 sm:px-12 md:px-20 py-6 sm:py-10">
+            <div className="text-center w-full max-w-xs sm:max-w-md mx-auto">
+              <h3 className="text-black font-montserrat text-base sm:text-lg md:text-2xl mb-3 sm:mb-4 italic font-bold leading-snug">
                 Share Your Memories with us
                 <br />
-                <span className="mt-1"> on our wedding day</span>
+                <span className="mt-1">on our wedding day</span>
               </h3>
 
               <input
@@ -105,17 +105,14 @@ export function ImageGallery() {
               <label htmlFor="image-upload">
                 <Button
                   asChild
-                  className="bg-[#863d24] hover:bg-gray-800 text-white px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 text-xs sm:text-sm md:text-base"
+                  className="bg-[#863d24] hover:bg-gray-800 text-white px-3 sm:px-5 md:px-6 py-2 sm:py-2.5 text-xs sm:text-sm md:text-base"
                 >
-                  <span className="cursor-pointer">
-                    <Upload className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
+                  <span className="cursor-pointer inline-flex items-center">
+                    <Upload className="w-4 h-4 sm:w-4 sm:h-4 mr-2" />
                     Upload Photos
                   </span>
                 </Button>
               </label>
-              {/* <p className="text-xs sm:text-sm text-gray-600 mt-2 font-montserrat">
-                Share your favorite moments with us!
-              </p> */}
             </div>
           </div>
         </div>
