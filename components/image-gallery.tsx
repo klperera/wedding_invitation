@@ -88,8 +88,10 @@ export function ImageGallery() {
           {/* Card content inside oval */}
           <div className="absolute inset-0 flex items-center justify-center px-12 sm:px-16 md:px-20 py-8 sm:py-10">
             <div className="text-center w-full">
-              <h3 className="text-black font-great-vibes text-2xl sm:text-3xl md:text-4xl mb-4 sm:mb-6">
+              <h3 className="text-black font-montserrat text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6 italic font-bold">
                 Share Your Memories with us
+                <br />
+                <span className="mt-1"> on our wedding day</span>
               </h3>
 
               <input
